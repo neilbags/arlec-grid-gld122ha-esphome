@@ -2,7 +2,7 @@
 
 This is a screw-type Edison E27 RGBWW smart-bulb available from Bunnings in Australia and New Xealand
 
-It contains a Tuya TYWE3L module with an ESP8266 chip. Here is the datasheet for the module:
+It contains a Tuya TYWE3L module with an ESP8266 chip. Datasheet for the module:
 [https://developer.tuya.com/en/docs/iot/wb2l-datasheet?id=K9duegc9bualu](https://developer.tuya.com/en/docs/iot/wifie3lpinmodule?id=K9605uj1ar87n)
 
 Here are the current measurements with the stock firmware:
