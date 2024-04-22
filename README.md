@@ -1,9 +1,6 @@
-# Arlec Grid GLD122HA ESPHome
-ESPHome on the Arlec Grid GLD122HA Smart Light (Bunnings Australia)
+This is a screw-type Edison E27 RGBWW smart-bulb available from Bunnings
 
-This is a screw-type bulb available from Bunnings.
-
-It contains a Tuya TYWE3L module with an ESP8266 chip:
+It contains a Tuya TYWE3L module with an ESP8266 chip. Here is the datasheel for the module:
 [https://developer.tuya.com/en/docs/iot/wb2l-datasheet?id=K9duegc9bualu](https://developer.tuya.com/en/docs/iot/wifie3lpinmodule?id=K9605uj1ar87n)
 
 Here are the current measurements with the stock firmware:
@@ -14,11 +11,11 @@ Here are the current measurements with the stock firmware:
 | Green  | 12mA    |
 | Blue   | 13mA    |
 
-Tuya-cloudcutter doesn't work on this model. You'll need to crack it open and flash it with a USB-TTL adaptor. Heat around where the white plastic meets the diffuse plastic, separate with a spudger then pry up the LED board.
+Tuya-cloudcutter doesn't work on this model. You'll need to crack it open and flash it with a USB-TTL adaptor. Heat around where the white plastic meets the diffuse plastic then separate it with a spudger. Then pry up the LED board with a pick.
 
 ![PXL_20240422_071536157-1](https://github.com/neilbags/arlec-grid-gld122ha-esphome/assets/2738833/b7d688bd-88a4-4afa-80d1-9ff4dcfe5be5)
 
-These are the pins you need to connect:
+These are the pins you need to connect to flash the module.
 | Wire Color | Function | Location | Notes |
 | ---------- | -------- | -------- | ----- |
 | Green      | TX       | First pin on the left | Connect to RX on your USB-TTL Adaptor |
