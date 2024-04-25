@@ -30,4 +30,68 @@ These are the pins you need to connect to flash the module.
 
 Now visit https://web.esphome.io/ to flash the basic ESPHome firmware. It will reboot when done but won't come back up unless you disconnect GPIO from GND.
 
-Configuration coming soon
+Here's the working config:
+```yaml
+esphome:
+  name: arlec4
+  friendly_name: arlec4
+
+esp8266:
+  board: esp01_1m
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: <your-key>
+
+ota:
+  password: <your-password>
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Arlec4 Fallback Hotspot"
+    password: <your password>
+
+captive_portal:
+
+light:
+  - platform: rgbww
+    name: "light1"
+    red: red
+    green: green
+    blue: blue
+    cold_white: cool
+    warm_white: warm
+    cold_white_color_temperature: 6536 K
+    warm_white_color_temperature: 2000 K
+    color_interlock: true
+
+output:
+  - platform: esp8266_pwm
+    id: cool
+    pin: GPIO5
+    max_power: 0.85
+  - platform: esp8266_pwm
+    id: warm
+    pin: GPIO13
+    max_power: 0.85
+  - platform: esp8266_pwm
+    id: red
+    pin: GPIO4
+    max_power: 0.7
+  - platform: esp8266_pwm
+    id: green
+    pin: GPIO12
+    max_power: 0.8
+  - platform: esp8266_pwm
+    id: blue
+    pin: GPIO14
+    max_power: 0.8
+```
